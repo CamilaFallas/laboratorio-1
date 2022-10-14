@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-button p {
-  margin:0;
-}
-
 body {
   font-family: 'Roboto', Sans-Serif;
 }
@@ -17,6 +13,8 @@ body {
 
 .sidebar {
   background-color: #FFC297;
+  max-width: 6%;
+  position: relative;
 }
 
 .hidden {
@@ -29,73 +27,122 @@ button {
   cursor: pointer;
 }
 
-.sidebar {
-  max-width: 7%;
-}
-
-.sidebar-list {
-  width: 80px;
-  padding: 0;
-}
-
 .sidebar-list li {
   list-style: none;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 /* <!-- ORANGE SIDE BAR ORANGE SIDE BAR ORANGE SIDE BAR ORANGE SIDE BAR --> */
 
 .sidebar-persianlogo::before {
-  content: url(./images/persiandesign.png);
-  position: relative;
-  top: 10px;
-  left: 1px;
+  background-image: url(./images/persiandesign.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  top: 15px;
+  left: 13px;
+  height: 50px;
+  width: 50px;
 }
 
 .sidebar-home::before {
-  content: url(./images/icon-Home.png);
+  background-image: url(./images/icon-Home.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  top: 110px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
 }
 
 .sidebar-notifications::before {
-  content: url(./images/icon-Notifications.png);
+  background-image: url(./images/icon-Notifications.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  top: 167px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
 }
 
 .sidebar-calendar::before {
-  content: url(./images/icon-Calendar.png);
+  background-image: url(./images/icon-Calendar.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  top: 233px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
 }
 
 .sidebar-stadistics::before {
-  content: url(./images/icon-chart.png);
+  background-image: url(./images/icon-chart.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  left: 20px;
+  bottom: 290px;
+  height: 40px;
+  width: 40px;
 }
 
 .sidebar-profile::before {
-  content: url(./images/icon-Person.png);
+  background-image: url(./images/icon-Person.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  bottom: 230px;
+  left: 20px;
+  height: 40px;
+  width: 40px
 }
 
 .sidebar-settings::before {
-  content: url(./images/settings.png);
-  position: relative;
-  top: 60px;
-  left: 1px;
+  background-image: url(./images/settings.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-items: center;
+  bottom: 10px;
+  left: 13px;
+  height: 50px;
+  width: 50px
 }
 
 /* <!-- SETTINGS BAR SETTINGS BAR SETTINGS BAR SETTINGS BAR--> */
 .container-settings {
-width: 17%;
+width: 16%;
 border-right: #858585 3px solid;
 }
 
 .settings-section {
   list-style: none;
   position: relative;
+  margin: 100px 0;
 }
 
 .settings-list {
   color: #858585;
   padding-left: 20px;
   text-align: left;
-  font-size: 22px;
-  margin-left: 30px;
+  font-size: 18px;
+  margin: 20px 0 20px 60px;
 }
 
 li button:hover {
@@ -103,8 +150,26 @@ li button:hover {
   font-weight: bolder;
 }
 
+.span-settings {
+  font-size: 23px;
+  font-weight: bold;
+  position: absolute;
+  left: 120px;
+  top: 25px;
+  height: 30px;
+  width: 30px;
+}
+
 .left-arrow {
-  content: url(./images/icon-arrow.png);
+  background-image: url(./images/icon-arrow.png);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:85px;
+  top: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 .settings-profile::after {
@@ -113,8 +178,8 @@ li button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  left:45px;
-  top: 35px;
+  left:35px;
+  top: 15px;
   height: 30px;
   width: 30px;
 }
@@ -125,10 +190,10 @@ li button:hover {
   background-repeat: no-repeat;
   position: absolute;
   content: "";
-  height: 35px;
-  width: 35px;
-  left:45px;
-  top: 130px;
+  height: 30px;
+  width: 30px;
+  left:35px;
+  top: 70px;
 }
 
 .settings-security::before {
@@ -137,10 +202,10 @@ li button:hover {
   background-repeat: no-repeat;
   position: absolute;
   content: "";
-  height: 35px;
-  width: 35px;
-  left:45px;
-  top: 230px;
+  height: 30px;
+  width: 30px;
+  left:35px;
+  top: 135px;
 }
 
 .settings-appereance::before {
@@ -149,10 +214,10 @@ li button:hover {
   background-repeat: no-repeat;
   position: absolute;
   content: "";
-  height: 35px;
-  width: 35px;
-  left:45px;
-  bottom: 135px;
+  height: 30px;
+  width: 30px;
+  left:35px;
+  bottom: 77px;
 }
 
 .settings-help::before {
@@ -161,16 +226,16 @@ li button:hover {
   background-repeat: no-repeat;
   position: absolute;
   content: "";
-  height: 35px;
-  width: 35px;
-  left:45px;
-  bottom: 30px;
+  height: 30px;
+  width: 30px;
+  left:35px;
+  bottom: 20px;
 }
 
 /* <!-- FORM FORM FORM FORM FORM FORM FORM FORM FORM--> */
 
 .container-form {
-  width: 60%;
+  width: 65%;
   position: relative;
   margin-left: 80px;
 }
@@ -189,7 +254,7 @@ li button:hover {
 
 .inline-block {
   display: flex;
-  padding: 30px 0;
+  padding: 2px 0;
   justify-content: space-between;
 }
 
@@ -205,7 +270,7 @@ select[name=city],
 input[type=password] {
 
   width: 100%;
-  padding: 12px 20px;
+  padding: 8px 14px;
   margin: 8px 0;
   border-color: #858585;
   border-radius: 5px;
