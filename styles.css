@@ -1,11 +1,19 @@
-body {
-  font-family: 'Roboto', Sans-Serif;
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+button p {
+  margin:0;
+}
+
+body {
+  font-family: 'Roboto', Sans-Serif;
+}
 .container {
   display: flex;
-} 
+}
 
 .sidebar {
   background-color: #FFC297;
@@ -18,11 +26,12 @@ body {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
-/* .sidebar {
-  width: 16%;
-} */
+.sidebar {
+  max-width: 7%;
+}
 
 .sidebar-list {
   width: 80px;
@@ -30,117 +39,208 @@ button {
 }
 
 .sidebar-list li {
-  /* text-align: center; */
   list-style: none;
   margin-bottom: 35px;
-  height: 50px;
 }
 
 /* <!-- ORANGE SIDE BAR ORANGE SIDE BAR ORANGE SIDE BAR ORANGE SIDE BAR --> */
 
 .sidebar-persianlogo::before {
   content: url(./images/persiandesign.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
+  position: relative;
+  top: 10px;
+  left: 1px;
 }
 
 .sidebar-home::before {
   content: url(./images/icon-Home.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
 }
 
 .sidebar-notifications::before {
   content: url(./images/icon-Notifications.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
 }
 
 .sidebar-calendar::before {
   content: url(./images/icon-Calendar.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
 }
 
 .sidebar-stadistics::before {
   content: url(./images/icon-chart.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
 }
 
 .sidebar-profile::before {
   content: url(./images/icon-Person.png);
-  /* position: relative;
-  height: 43px;
-  width: 43px; */
 }
 
 .sidebar-settings::before {
   content: url(./images/settings.png);
-  /* position: relative; */
-  /* height: 10px;
-  width: 10px;  */
+  position: relative;
+  top: 60px;
+  left: 1px;
 }
 
 /* <!-- SETTINGS BAR SETTINGS BAR SETTINGS BAR SETTINGS BAR--> */
+.container-settings {
+width: 17%;
+border-right: #858585 3px solid;
+}
 
 .settings-section {
   list-style: none;
+  position: relative;
 }
 
 .settings-list {
   color: #858585;
-  position: relative;
-  margin-top: 30px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 22px;
+  margin-left: 30px;
 }
 
-button:hover {
+li button:hover {
   color: black;
+  font-weight: bolder;
 }
 
 .left-arrow {
   content: url(./images/icon-arrow.png);
 }
 
-.settings-profile::before {
+.settings-profile::after {
   background-image: url(./images/icon-Edit.png);
+  content: "";
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  left:45px;
+  top: 35px;
+  height: 30px;
+  width: 30px;
 }
 
-.settings-profile::before {
+.settings-notification::before {
   background-image: url(./images/icon-Notifications-settings.png);
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left:45px;
+  top: 130px;
 }
 
-.settings-profile::before {
+.settings-security::before {
   background-image: url(./images/icon-Lock.png);
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left:45px;
+  top: 230px;
 }
 
-.settings-profile::before {
+.settings-appereance::before {
   background-image: url(./images/icon-Settings.png);
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left:45px;
+  bottom: 135px;
 }
 
-.settings-profile::before {
+.settings-help::before {
   background-image: url(./images/icon-Help.png);
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left:45px;
+  bottom: 30px;
 }
 
 /* <!-- FORM FORM FORM FORM FORM FORM FORM FORM FORM--> */
 
+.container-form {
+  width: 60%;
+  position: relative;
+  margin-left: 80px;
+}
+
+.container-form-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+
+.image-size {
+  height: 70px;
+  width: 70px;
+}
+
+.inline-block {
+  display: flex;
+  padding: 30px 0;
+  justify-content: space-between;
+}
+
+.block {
+  display:block;
+}
+
+
+input[type=email],
+input[type=text],
+input[type=tel],
+select[name=city],
+input[type=password] {
+
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-color: #858585;
+  border-radius: 5px;
+}
+
+/* <!-- RIGHT BUTTOMS RIGHT BUTTOMS RIGHT BUTTOMS RIGHT BUTTOMS RIGHT BUTTOMS RIGHT BUTTOMS --> */
+.container-buttons {
+display: flex;
+margin: 10px;
+}
+
+.container-buttons div {
+padding: 10px;
+}
+
+.image-size-2 {
+  height: 30px;
+  width: 30px;
+}
+
+.button-reset {
+  background-color: white;
+  color: #FF7008;
+  border: 2px solid #FF852C;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.button-submit {
+  background-color: #FF7008;
+  color: white;
+  border: 2px solid #FF7008;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
